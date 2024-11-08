@@ -7,7 +7,7 @@ $(document).ready(function () {
 
         $("td > p").filter(function () {
             // Matches exact string   
-            return $(this).text() === "None" || $(this).text() === "Ei mitään";
+            return $(this).text() === "None" || $(this).text() === "Ingen" || $(this).text() === "Ei mitään";
         }).empty();
 
         $("td:has(a[href*='/cgi-bin/koha/members/moremember.pl?borrowernumber='])").addClass('text-center').empty().append("<span style='font-size:150%'>&check;</span>");
