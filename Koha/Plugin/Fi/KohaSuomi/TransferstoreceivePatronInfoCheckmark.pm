@@ -123,6 +123,12 @@ sub tool {
 sub install() {
     my ( $self, $args ) = @_;
 
+    $self->store_data(
+            {
+                type => 'intranetUserJs',
+            }
+        );
+        
     return 1;
 }
 
