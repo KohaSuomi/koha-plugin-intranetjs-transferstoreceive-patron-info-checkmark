@@ -22,7 +22,7 @@ our $metadata = {
     minimum_version => '23.11',
     maximum_version => '',
     version         => $VERSION,
-    description     => "Muuttaa asiakastiedot vastaanotettavat kuljetukset-raportilla oikein-merkiksi",
+    description     => "Muuttaa asiakastiedot vastaanotettavat kuljetukset-raportilla oikein-merkiksi. (Paikalliskannat)",
 };
 
 ## This is the minimum code required for a plugin's 'new' method
