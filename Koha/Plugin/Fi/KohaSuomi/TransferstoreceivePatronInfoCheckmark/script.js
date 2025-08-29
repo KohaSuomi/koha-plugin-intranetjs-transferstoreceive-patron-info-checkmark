@@ -3,7 +3,12 @@
 $(document).ready(function () {
     if (window.location.pathname == '/cgi-bin/koha/circ/transferstoreceive.pl') {
 
-        $("th:contains('On hold for'), th:contains('Reserverad för')").append(" patron");
+        $("th:contains('Reserverad för')").each(function () {
+            $(this).text('Reserverad');
+        });
+        $("th:contains('On hold for')").each(function () {
+            $(this).text('On hold');
+        });
 
         $("td > p").filter(function () {
             // Matches exact string   
@@ -14,3 +19,4 @@ $(document).ready(function () {
     }
 });
 ///LOPPU///
+
