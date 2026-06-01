@@ -9,6 +9,7 @@ use base qw(Koha::Plugins::Base);
 use C4::Context;
 use utf8;
 use File::Slurp;
+use C4::Languages;
 
 ## Here we set our plugin version
 our $VERSION = "1.0.0";
@@ -25,6 +26,25 @@ our $metadata = {
     description     => "Muuttaa asiakastiedot vastaanotettavat kuljetukset-raportilla oikein-merkiksi. (Paikalliskannat)",
 };
 
+sub get_localized_metadata {
+    my ($self) = @_;
+    my $lang = C4::Languages::getlanguage() || 'en';
+    my ($name, $description);
+
+    if ($lang eq 'sv-SE') {
+        $name = "IntranetUserJS: Transporter för att ta emot låntagarinformation till bockmarkering";
+        $description = "Ändrar låntagarinformation till en bockmarkering i rapporten mottagna transporter. (Lokala databaser)";
+    
+    } elsif ( $lang eq 'fi-FI' ) {
+        $name = "IntranetUserJS: Siirrot vastaanottavat asiakastiedot valintamerkkiä varten";
+        $description = "Muuttaa asiakastiedot vastaanotettavat kuljetukset-raportilla oikein-merkiksi. (Paikalliskannat)";
+    } else {
+        $name = "IntranetUserJS: Transfers to receive patron info to checkmark";
+        $description = "Changes customer data to a checkmark on the received transfers report. (Local databases)";
+    }
+    return ($name, $description);
+}
+
 ## This is the minimum code required for a plugin's 'new' method
 ## More can be added, but none should be removed
 sub new {
@@ -38,6 +58,10 @@ sub new {
     ## This runs some additional magic and checking
     ## and returns our actual 
     my $self = $class->SUPER::new($args);
+    
+    my ($name, $description) = $self->get_localized_metadata();
+    $self->{'metadata'}->{'name'} = $name;
+    $self->{'metadata'}->{'description'} = $description;
 
     return $self;
 }
