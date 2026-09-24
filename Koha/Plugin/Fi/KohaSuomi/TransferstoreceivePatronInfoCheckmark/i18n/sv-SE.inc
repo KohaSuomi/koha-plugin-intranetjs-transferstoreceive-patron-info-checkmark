@@ -1,6 +1,6 @@
 [%
     T = {
-        configure_1                                = "IntranetUserJS: Ersätter låntagarinformation med bockmarkering i Överföringar att ta emot-rapporten Inställningar",
+        configure_1                                = "IntranetUserJS: Ersätter låntagarinformation med bockmarkering i Överföringar att ta emot-rapporten > Inställningar",
         configure_2                                = "Hem",
         configure_3                                = "Plugins",
         configure_4                                = "&rsaquo; IntranetUserJS: Ersätter låntagarinformation med bockmarkering i Överföringar att ta emot-rapporten &rsaquo; Inställningar",

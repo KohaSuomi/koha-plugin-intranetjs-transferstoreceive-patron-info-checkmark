@@ -1,6 +1,6 @@
 [%
     T = {
-        configure_1                                = "IntranetUserJS: Korvaa asiakastiedot oikein-merkillä Vastaantotettava kuljetukset -raportilla Asetukset",
+        configure_1                                = "IntranetUserJS: Korvaa asiakastiedot oikein-merkillä Vastaantotettava kuljetukset -raportilla > Asetukset",
         configure_2                                = "Koti",
         configure_3                                = "Liitännäiset",
         configure_4                                = "&rsaquo; IntranetUserJS: Korvaa asiakastiedot oikein-merkillä Vastaantotettava kuljetukset -raportilla &rsaquo; Asetukset",

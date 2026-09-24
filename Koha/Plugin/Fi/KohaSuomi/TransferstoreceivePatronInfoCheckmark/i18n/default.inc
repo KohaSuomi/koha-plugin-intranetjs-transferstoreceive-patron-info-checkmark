@@ -1,6 +1,6 @@
 [%
     T = {
-        configure_1                                = "IntranetUserJS: Replace patron info with a checkmark in Transfers to receive report Configuration",
+        configure_1                                = "IntranetUserJS: Replace patron info with a checkmark in Transfers to receive report > Configuration",
         configure_2                                = "Home",
         configure_3                                = "Plugins",
         configure_4                                = "&rsaquo; IntranetUserJS: Replace patron info with a checkmark in Transfers to receive report &rsaquo; Configuration",
