@@ -32,14 +32,14 @@ sub get_localized_metadata {
     my ($name, $description);
 
     if ($lang eq 'sv-SE') {
-        $name = "IntranetUserJS: Transporter för att ta emot låntagarinformation till bockmarkering";
+        $name = "IntranetUserJS: Ersätter låntagarinformation med bockmarkering i Överföringar att ta emot-rapporten";
         $description = "Ändrar låntagarinformation till en bockmarkering i rapporten mottagna transporter. (Lokala databaser)";
     
     } elsif ( $lang eq 'fi-FI' ) {
-        $name = "IntranetUserJS: Siirrot vastaanottavat asiakastiedot valintamerkkiä varten";
+        $name = "IntranetUserJS: Korvaa asiakastiedot oikein-merkillä Vastaantotettava kuljetukset -raportilla";
         $description = "Muuttaa asiakastiedot vastaanotettavat kuljetukset-raportilla oikein-merkiksi. (Paikalliskannat)";
     } else {
-        $name = "IntranetUserJS: Transfers to receive patron info to checkmark";
+        $name = "IntranetUserJS: Replace patron info with a checkmark in Transfers to receive report";
         $description = "Changes customer data to a checkmark on the received transfers report. (Local databases)";
     }
     return ($name, $description);
